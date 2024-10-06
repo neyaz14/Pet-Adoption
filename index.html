@@ -1,15 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Adoption</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 <body>
 
+    <header class="w-11/12 mx-auto my-4">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a class="font-bold">Home</a></li>
+                      <li><a class="font-bold">Shop</a></li>
+                      <li><a class="font-bold">Contact</a></li>
+                    </ul>
+                  </div>
+
+                    <a class="btn btn-ghost text-xl">
+                        <img src="images/logo.webp" alt="">Peddy
+                    </a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a class="font-semibold">Home</a></li>
+                    <li><a class="font-semibold">Shop</a></li>
+                    <li><a class="font-semibold">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn border rounded-full w-[55px] h-[55px] bg-white"><img class="" src="https://img.icons8.com/?size=50&id=12438&format=png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+
+<!-- header -->
+        <section class="mt-10">
+            <div class="mx-auto md:w-[762px] text-center">
+                <p>Bringing Families Together ❤️‍🔥 </p>
+                <h1 class="font-bold md:text-[54px] text-[36px]"> Your Path to Adoption <br> Starts Here</h1>
+                <p class="mx-auto font-semibold md:w-[550px] text-[16px]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            </div>
+            <div class="mx-auto">
+                <img class="mx-auto" src="images/pet.webp" alt="">
+            </div>
+        </section>
+
+    </header>
+
+
+    <main class="w-11/12 mx-auto my-10">
+        <section class="text-center mx-auto md:w-[650px]">
+            <h2 class="font-bold text-[40px]">Adopt  Your  Best Friend</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        </section>
+
+
+<!-- Buttons -->
+        <section id="btn-container" class="w-11/12 mx-auto flex gap-10 items-center justify-between my-20">
+
+        </section>
+
+
+
+<!-- Best deals for you -->
+        <section class="md:w-11/12 mx-auto">
+    <!-- top description -->
+            <div class="flex items-center justify-between">
+                <h3 class="font-bold text-xl">Best Deal For You</h3>
+                <button class="btn bg-blue-950 text-white font-semibold hover:text-black hover:font-bold">Short by Price</button>
+
+            </div>
 
 
     
+            <section class="border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <!-- animal show place -->
+                <div id="animal-show" class="border  md:col-span-1 lg:col-span-3">
+
+                </div>
+
+    <!-- wishlist -->
+                <div id="wishlist" class="border md:col-span-1 lg:col-span-1">
+
+                </div>
+
+            </section>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="  bg-zinc-900 text-white p-10">
+        
+            <div class="w-11/12 mx-auto footer flex items-center justify-between">
+                <nav class="">
+                    <h6 class=" flex gap-3 items-center text-white font-bold text-xl"><img src="images/logo.webp" alt=""> Peddy</h6>
+                    <p class="">
+                      Location: av. Washington 165, NY CA 54003 <br>
+                          Phone: +31 85 964 47 25 <br>
+                          Email: info@yourdomain.com <br>
+                          Openings hours: 9.00 AM - 5.00 PM
+                    </p>
+                    <div class="flex gap-3">
+                      <img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="">
+                      <img src="https://img.icons8.com/?size=48&id=32323&format=png" alt="">
+                      <img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="">
+                    </div>
+                  </nav>
+                  <nav>
+                    <h6 class="font-bold">Usefull Links</h6>
+                    <a class="link link-hover">Home</a>
+                    <a class="link link-hover">Contact</a>
+                    <a class="link link-hover">Animals</a>
+                    <a class="link link-hover">Foundation</a>
+                  </nav>
+                  <nav>
+                      <div class="">
+                          <p>Drop a Message</p>
+                          <label class="input input-bordered flex items-center gap-2 mt-2">
+                              <!-- <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 16 16"
+                                fill="currentColor"
+                                class="h-4 w-4 opacity-70">
+                                <path
+                                  d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                                <path
+                                  d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+                              </svg> -->
+                              <input type="text" class="grow text-black font-semibold" placeholder="Email" />
+                            </label>
+                            <button class="btn mt-3 btn-primary w-[240px]">Submit</button>
+                      </div>
+                  </nav>
+      
+            </div>
+        </footer>
+
+
     
+
+        <script src="loadButton.js"></script>
+        <script src="loadAllPets.js"></script>
+
 </body>
 </html>
