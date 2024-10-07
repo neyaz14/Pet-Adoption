@@ -74,7 +74,7 @@ const showAllPets = (petsCards) =>{
         <hr>
         <div class="flex items-center justify-center gap-5">
                 
-            <button id="wishlist-${petCard.petId}" class="btn btn-outline btn-sm  font-semibold">
+            <button id="wishlist-${petCard.petId}"   onclick="loadWishlist(${petCard.petId})"  class="btn btn-outline btn-sm  font-semibold">
             <img src="https://img.icons8.com/?size=24&id=82788&format=png" alt="">
             </button>
 

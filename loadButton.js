@@ -51,7 +51,6 @@ const LoadPetsInfoForBtn = (pets) =>{
         <img src=${pet.category_icon}> ${pet.category}
         </button>
         `
-       
         btnContainer.append(div);
     });
 }
