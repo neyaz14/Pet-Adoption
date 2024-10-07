@@ -6,7 +6,36 @@ const loadAllPets = ()=>{
 }
 loadAllPets();
 
+
+
+
+// to make details 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const showAllPets = (petsCards) =>{
+// add spinner function here 
     const animalContainer = document.getElementById('animal-show');
     // sothat when the button will be hitten sothat the whole section disappeared and then new data loaded
     animalContainer.innerHTML = "";
@@ -24,6 +53,7 @@ const showAllPets = (petsCards) =>{
     }else{
         animalContainer.classList.add('grid');
     }
+// ---------------------------------------------- 
     petsCards.forEach(petCard => {
         // console.log(petCard.image);
         const card = document.createElement('div');
@@ -44,9 +74,13 @@ const showAllPets = (petsCards) =>{
         <hr>
         <div class="flex items-center justify-center gap-5">
                 
-            <button class="btn btn-outline btn-sm  font-semibold"><img src="https://img.icons8.com/?size=24&id=82788&format=png" alt=""></button>
-            <button class="btn btn-outline btn-sm   font-semibold">Adopt</button>
-            <button class="btn btn-outline btn-sm  font-semibold">Details</button>
+            <button id="wishlist-${petCard.petId}" class="btn btn-outline btn-sm  font-semibold">
+            <img src="https://img.icons8.com/?size=24&id=82788&format=png" alt="">
+            </button>
+
+            <button id="adopt-${petCard.petId}" class="btn btn-outline btn-sm   font-semibold">Adopt</button>
+
+            <button id="details-${petCard.petId}" onclick="loadDetails(${petCard.petId})" class="btn btn-outline btn-sm  font-semibold">Details</button>
 
         </div>
         `
