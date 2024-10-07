@@ -127,7 +127,7 @@
 
 
 
-
+<!-- modal for  details -->
 <!-- Open the modal using ID.showModal() method -->
         <button id="showDetailsModal" class="btn  hidden"  onclick="my_modal_5.showModal()">open modal</button>
         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
@@ -152,8 +152,24 @@
 
 
 
+<!-- modal for adopt button -->
+        <button id="showAdoptModal" class="btn  hidden"  onclick="adoptModal.showModal()">open modal</button>
+        <dialog id="adoptModal" class="modal modal-bottom sm:modal-middle">
+              <div  class="modal-box flex flex-col items-center">
+                <div id="adopt-modal-content" class="h-auto w-auto ">
+
+                </div>
 
 
+                <div class="modal-action ">
+                  <form method="dialog">
+                          <!-- if there is a button in form, it will close the modal -->
+                        <button id="adopt-btn-close" class="hidden btn btn-outline  text-center w-[400px] "></button>
+                  </form>
+                </div>
+              </div>
+                    
+        </dialog>
 
     </main>
 
@@ -224,6 +240,7 @@
 
     
 
+        <script src="test.js"></script>
         <script src="modal.js"></script>
         <script src="loadButton.js"></script>
         <script src="loadAllPets.js"></script>

@@ -57,9 +57,9 @@ const showAllPets = (petsCards) =>{
     petsCards.forEach(petCard => {
         // console.log(petCard.image);
         const card = document.createElement('div');
-        card.className = " border w-[290px] h-[430px] flex flex-col gap-6 p-2";
+        card.className = " border w-[290px] h-[450px] flex flex-col gap-6 p-2";
         card.innerHTML = `
-        <div class="border h-full w-full object-cover ">
+        <div class=" h-full w-full object-cover ">
             <img src="${petCard.image}">
         </div>
         <div class="">
@@ -78,7 +78,7 @@ const showAllPets = (petsCards) =>{
             <img src="https://img.icons8.com/?size=24&id=82788&format=png" alt="">
             </button>
 
-            <button id="adopt-${petCard.petId}" class="btn btn-outline btn-sm   font-semibold">Adopt</button>
+            <button onclick="loadAdopt(${petCard.petId})" id="adopt-${petCard.petId}" class="btn btn-outline btn-sm   font-semibold">Adopt</button>
 
             <button id="details-${petCard.petId}" onclick="loadDetails(${petCard.petId})" class="btn btn-outline btn-sm  font-semibold">Details</button>
 

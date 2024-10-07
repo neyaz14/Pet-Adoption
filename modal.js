@@ -12,7 +12,7 @@ const removeDetails = ()=>{
 }
 
 const showDetails = (detail) =>{
-    console.log(detail.vaccinated_status);
+    // console.log(detail.vaccinated_status);
     removeDetails();
     const modalContent = document.getElementById('modal-content');
     const div = document.createElement('div');
@@ -38,13 +38,9 @@ const showDetails = (detail) =>{
     <hr>
 
     <div> 
-
         <p class="font-semibold "> Details Information </p>
         <p class="text-left"> ${detail.pet_details} </p>
     </div>
-    
-
-    
     `
     modalContent.append(div);
 
@@ -66,3 +62,66 @@ const showDetails = (detail) =>{
       "pet_name": "Mia"
     }
 */
+
+
+
+
+
+
+// modal for adopt button
+
+// for count down
+function countdown(num = 3) {
+    const clockid = setInterval(() => {
+        // if(num)
+        console.log(num);
+        num = num - 1;
+        if (num < 0) {
+            clearInterval(clockid);
+            document.getElementById('adopt-btn-close').click();
+            // document.getElementById(`adopt-${petCard.petId}`).classList.add('');
+            
+        }
+        // return num;
+    }, 1000);
+}
+
+
+
+    
+
+
+
+const removeAdopt = ()=>{
+    const modalContent = document.getElementById('adopt-modal-content');
+    modalContent.innerHTML="";
+}
+
+const loadAdopt =(adoptId)=>{
+    fetch(`https://openapi.programming-hero.com/api/peddy/pet/${adoptId}`)
+    .then(res=> res.json())
+    .then(data => showAdoptModal(data.petData))
+    .catch(error => console.log(error));
+}
+
+const showAdoptModal = (adopt)=>{
+    // console.log(adopt);
+    removeAdopt();
+    const adoptContent = document.getElementById('adopt-modal-content');
+    const div = document.createElement('div');
+    div.innerHTML= `
+    <div class="text-center">
+        
+        <h1 class="font-bold text-3xl"> Congrates </h1>
+        <p class="text-xl">Adoption Process is Start For Your Pet</p>
+        <p class="text-4xl font-bold">${countdown()}</p>
+        
+    </div>
+    `
+
+
+    adoptContent.append(div);
+    // document.getElementById('adoptModal').showModal();
+    document.getElementById('showAdoptModal').click();
+}
+// <img src="${images/handshake.png}">
