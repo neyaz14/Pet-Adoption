@@ -36,6 +36,10 @@ loadAllPets();
 
 const showAllPets = (petsCards) =>{
 // add spinner function here 
+
+    document.getElementById("spinner").style.display="none";
+    document.getElementById('animal-show').style.display="grid";
+    document.getElementById('wishlist-content').style.display="grid";
     const animalContainer = document.getElementById('animal-show');
     // sothat when the button will be hitten sothat the whole section disappeared and then new data loaded
     animalContainer.innerHTML = "";

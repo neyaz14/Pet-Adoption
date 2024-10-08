@@ -96,12 +96,13 @@
     <!-- top description -->
             <div class="flex items-center justify-between my-5">
                 <h3 class="font-bold text-xl">Best Deal For You</h3>
-                <button class="btn bg-blue-950 text-white font-semibold hover:text-black hover:font-bold">Short by Price</button>
+                <button id="sort-btn" onclick="sortbtn()" class="btn bg-blue-950 text-white font-semibold hover:text-black hover:font-bold">Short by Price</button>
 
             </div>
 
 
-    
+        <!-- spinner -->
+            <div id="spinner"></div>
             <section class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
     <!-- animal show place -->
                 <div  class="grid col-span-1 md:col-span-2 lg:col-span-3">
@@ -242,6 +243,7 @@
 
     
 
+        <script src="sort.js"></script>
         <script src="wishlist.js"></script>
         <script src="modal.js"></script>
         <script src="loadButton.js"></script>

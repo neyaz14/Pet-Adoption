@@ -32,8 +32,13 @@ const loadbycategory=(id)=>{
         removeActiveClass();
         const activebtn = document.getElementById(`btn-${id}`); 
         activebtn.classList.add('active');
-        console.log(activebtn);
-        showAllPets(data.data)
+        // add spinner start
+        document.getElementById('animal-show').style.display="none";
+        document.getElementById('wishlist-content').style.display="none";
+        document.getElementById('spinner').style.display="block";
+        setTimeout(function(){
+            showAllPets(data.data)
+        },3000)
     })
     .catch(error => console.log(error));
 }
