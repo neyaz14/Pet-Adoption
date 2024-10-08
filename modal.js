@@ -48,20 +48,7 @@ const showDetails = (detail) =>{
 }
 
 
-/**
- {
-      "petId": 2,
-      "breed": "Siamese",
-      "category": "Cat",
-      "date_of_birth": "2022-09-05",
-      "price": 800,
-      "image": "https://i.ibb.co.com/3Wzz41D/pet-2.jpg",
-      "gender": "Female",
-      "pet_details": "This affectionate female Siamese cat is known for her vocal nature and love for attention. Born on September 5, 2022, she enjoys interactive play and snuggles. Fully vaccinated and priced at $800, she's the perfect fit for cat lovers who appreciate an intelligent, engaging, and sociable feline companion.",
-      "vaccinated_status": "Fully",
-      "pet_name": "Mia"
-    }
-*/
+
 
 
 
@@ -84,12 +71,6 @@ function countdown() {
     }, 1000); 
     return num; 
 }
-
-
-
-
-    
-
 
 
 const removeAdopt = ()=>{

@@ -38,7 +38,7 @@ const loadbycategory=(id)=>{
         document.getElementById('spinner').style.display="block";
         setTimeout(function(){
             showAllPets(data.data)
-        },3000)
+        },2000)
     })
     .catch(error => console.log(error));
 }

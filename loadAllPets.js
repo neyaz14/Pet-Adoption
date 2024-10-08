@@ -29,7 +29,7 @@ const showAllPets = (petsCards) =>{
     if(petsCards.length==0){
         animalContainer.classList.remove('grid');
         const card = document.createElement('div');
-        card.className ="bg-gray-200 px-20 py-10 flex flex-wrap flex-col justify-center items-center gap-4";
+        card.className ="w-auto bg-gray-200 px-20 py-10 flex flex-wrap flex-col justify-center items-center gap-4";
         card.innerHTML =` 
             <img src="images/error.webp">
             <p class='font-bold text-xl'> No Information Available</p>
@@ -52,10 +52,10 @@ const showAllPets = (petsCards) =>{
         <div class="">
             <h1 class="font-bold text-xl">${petCard.pet_name}</h1>
             <ul>
-                <li>Breed: ${petCard.breed} </li>
-                <li>Birth: ${petCard.date_of_birth} </li>
-                <li>Gender: ${petCard.gender} </li>
-                <li>Price: ${petCard.price} </li>
+                <li>Breed: ${petCard.breed==null ||typeof petCard.breed==undefined?"Not Available":petCard.breed} </li>
+                <li>Birth: ${petCard.date_of_birth==null || typeof petCard.date_of_birth==undefined?"Not Available":petCard.date_of_birth} </li>
+                <li>Gender: ${petCard.gender==null || typeof petCard.gender==undefined?"Not Available":petCard.gender} </li>
+                <li>Price: ${petCard.price==null || typeof petCard.price==undefined?"Not Available":petCard.price} </li>
             </ul>
         </div>
         <hr>
