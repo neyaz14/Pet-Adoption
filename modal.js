@@ -69,22 +69,22 @@ const showDetails = (detail) =>{
 
 
 // modal for adopt button
-
 // for count down
-function countdown(num = 3) {
+function countdown() {
+    let num = 3; 
     const clockid = setInterval(() => {
-        // if(num)
-        console.log(num);
-        num = num - 1;
-        if (num < 0) {
-            clearInterval(clockid);
-            document.getElementById('adopt-btn-close').click();
-            // document.getElementById(`adopt-${petCard.petId}`).classList.add('');
-            
+        document.getElementById('countdown-display').innerText = num;
+        if (num <= 0) { 
+            clearInterval(clockid); 
+            document.getElementById('adopt-btn-close').click(); 
         }
-        // return num;
-    }, 1000);
+        else {
+            num--; 
+        }
+    }, 1000); 
+    return num; 
 }
+
 
 
 
@@ -114,7 +114,7 @@ const showAdoptModal = (adopt)=>{
         
         <h1 class="font-bold text-3xl"> Congrates </h1>
         <p class="text-xl">Adoption Process is Start For Your Pet</p>
-        <p class="text-4xl font-bold">${countdown()}</p>
+        <p id="countdown-display" class="text-4xl font-bold">${countdown()}</p>
         
     </div>
     `
